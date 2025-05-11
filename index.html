@@ -1,122 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FORTUNE MAKHANA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4fff8;
+    :root {
+      --primary: #14532d;
+      --accent: #a7f3d0;
+      --light: #ecfdf5;
+      --text: #1f2937;
+      --heading: #064e3b;
+    }
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      color: #2c3e50;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--text);
       line-height: 1.6;
     }
-    .promo-banner {
-      background: #7ac142;
+    header {
+      background: var(--primary);
       color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
+      flex-wrap: wrap;
+    }
+    .logo {
+      max-height: 70px;
+    }
+    .header-text h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1px;
+    }
+    .header-text h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #d1fae5;
+    }
+    .promo-banner {
+      background: var(--accent);
       text-align: center;
       padding: 1rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-    header {
-      background-color: #d0f5ce;
-      color: #2c3e50;
-      padding: 2rem;
-      text-align: center;
+      font-weight: 600;
+      color: #065f46;
     }
     section {
-      padding: 2rem;
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
     }
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .highlight {
-      background: #e8f8ec;
-      border-left: 5px solid #7ac142;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 5px;
-    }
-    footer {
-      background: #2c3e50cc;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    .contact {
-      background: #d1f5d3;
-      padding: 1rem;
-      border-radius: 5px;
-      text-align: center;
-      margin-top: 2rem;
-    }
-    img.logo {
-      max-width: 200px;
+    h2 {
+      font-size: 1.8rem;
+      color: var(--heading);
       margin-bottom: 1rem;
     }
-    a.whatsapp {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+    ul li {
+      margin-bottom: 0.7rem;
     }
-    a.whatsapp img {
-      width: 20px;
-      height: 20px;
-    }
-    .product-image {
-      text-align: center;
-      margin: 2rem 0;
+    .highlight, .sustainability, .contact {
+      background: white;
+      padding: 1.5rem;
+      border-left: 5px solid var(--primary);
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
     }
     .product-image img {
       max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
-    .sustainability, .inquiry-form {
-      background: #f0fff5;
-      border-left: 5px solid #7ac142;
-      padding: 1rem;
-      margin: 2rem 0;
-      border-radius: 8px;
-    }
-    .sustainability h3, .inquiry-form h3 {
-      margin-top: 0;
-    }
-    .inquiry-form form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .inquiry-form input, .inquiry-form textarea, .inquiry-form button {
-      padding: 0.7rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-    .inquiry-form button {
-      background-color: #7ac142;
+    .contact a.whatsapp {
+      background: #25d366;
       color: white;
-      border: none;
-      cursor: pointer;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .contact a.whatsapp img {
+      width: 20px;
+    }
+    footer {
+      background: #064e3b;
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header-text {
+        margin-top: 1rem;
+      }
+      .header-text h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
@@ -127,9 +122,10 @@
 
   <header>
     <img src="fortune makhana.png" alt="Fortune Makhana Logo" class="logo">
-    <h1><strong>FORTUNE MAKHANA</strong></h1>
-    <h2>India’s Trusted Makhana Grower & Global Exporter</h2>
-    <p>From Our Own Fertile Farmland to International Markets — Delivering Purity, Tradition & Excellence Worldwide.</p>
+    <div class="header-text">
+      <h1>FORTUNE MAKHANA</h1>
+      <h2>India’s Trusted Makhana Grower & Global Exporter</h2>
+    </div>
   </header>
 
   <section>
@@ -149,8 +145,8 @@
     </ul>
 
     <h2>🌱 Our Story Begins in the Soil</h2>
-    <p>At Fortune Makhana, our journey is deeply rooted in love for the land. We proudly <strong>grow makhana in our own fertile farmland</strong>, <strong style="color: #7ac142; font-weight: bold;">spanning over 100+ acres</strong>, cultivated by dedicated farmers who treat every seed with care.</p>
-    <p>This is not just farming — it’s a tradition of purity and trust, passed down through generations. Our family has been growing makhana since the time of our ancestors, preserving the heritage and excellence in every step.</p>
+    <p>At Fortune Makhana, our journey is deeply rooted in love for the land. We proudly <strong>grow makhana in our own fertile farmland</strong>, <strong style="color: #14532d; font-weight: bold;">spanning over 100+ acres</strong>, cultivated by dedicated farmers who treat every seed with care.</p>
+    <p>This is not just farming — it’s a tradition of purity and trust, passed down through generations. <strong>Our family has been growing makhana since the time of our ancestors</strong>, preserving the heritage and excellence in every step.</p>
 
     <h2>🩺 Why Doctors & Nutritionists Swear by Makhana</h2>
     <div class="highlight">
@@ -178,25 +174,13 @@
     </div>
 
     <div class="sustainability">
-      <h3>🌿 Sustainability & Ethical Farming</h3>
+      <h2>🌿 Sustainability & Ethical Farming</h2>
       <p>We are committed to eco-friendly, sustainable agricultural practices. Our makhana is grown using traditional, chemical-free methods that protect biodiversity, preserve water, and nurture the land for future generations.</p>
       <p>We also promote ethical labor and community development to ensure that everyone involved in our process benefits from our growth.</p>
     </div>
 
-    <div class="inquiry-form">
-      <h3>📬 Business Inquiry – Let's Connect</h3>
-      <form action="https://formsubmit.co/fortunemakhana@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="country" placeholder="Your Country" required>
-        <textarea name="message" placeholder="Tell us what you need..." rows="4" required></textarea>
-        <button type="submit">Submit Inquiry</button>
-      </form>
-    </div>
-
     <div class="contact">
-      <h3>📞 Ready to Taste the Difference?</h3>
+      <h2>📞 Ready to Taste the Difference?</h2>
       <p>Experience makhana the way it’s meant to be — pure, clean, and direct from the farm.</p>
       <p><strong>Call or WhatsApp:</strong> +91 8603-097124</p>
       <a href="https://wa.me/918603097124" target="_blank" class="whatsapp">
@@ -208,7 +192,7 @@
   </section>
 
   <footer>
-    <p><strong>FORTUNE MAKHANA – Where Purity Meets Prosperity</strong><br>
+    <p><strong>FORTUNE MAKHANA – Where Purity Meets Prosperity</strong><br />
     Taste the tradition. Feel the freshness. India’s trusted name for honest snacking.</p>
   </footer>
 </body>
